@@ -30,7 +30,7 @@ With VS Code:
 
 With Visual Studio:
 * Clone this repository.
-* Open the ionic-conference-app.sln in Visual Studio.
+* Open the build2016-vsmobile.sln in Visual Studio.
 * Install npm packages by going to your Solution Explorer -> Dependencies -> npm and clicking on 'Restore Packages'. 
 * Once packages are restored, build the project and deploy it on an android emulator. 
 * Success
