@@ -1,8 +1,10 @@
+/// <binding BeforeBuild='build' />
 /******************************************************************************
  * Gulpfile
  * Be sure to run `npm install` for `gulp` and the following tasks to be
  * available from the command line. All tasks are run using `gulp taskName`.
  ******************************************************************************/
+var Promise = require('es6-promise').Promise
 var fs = require('fs'),
     browserify = require('browserify'),
     watchify = require('watchify'),
@@ -13,7 +15,10 @@ var fs = require('fs'),
     gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    watch = require('gulp-watch');
+    watch = require('gulp-watch'),
+    gutil = require('gulp-util'),
+    buffer = require('vinyl-buffer'),
+    sourcemaps = require('gulp-sourcemaps');
 
 
 var IONIC_DIR = "node_modules/ionic-angular/"
@@ -33,12 +38,29 @@ gulp.task('watch', ['sass', 'copy.fonts', 'copy.html', 'copy.scripts'], function
   return bundleTask(true);
 });
 
+/******************************************************************************
+ * patch io2
+ * patch typings
+ ******************************************************************************/
+gulp.task('patch-io', function (done) {
+    return gulp.src('_fixes/content.js')
+        .pipe(gulp.dest('node_modules/ionic-angular/components/content'));
+});
+
+/******************************************************************************
+ * patch ng
+ * patch typings
+ ******************************************************************************/
+gulp.task('patch-ng', function (done) {
+    return gulp.src('_fixes/promise.d.ts')
+        .pipe(gulp.dest('node_modules/angular2/src/facade'));
+});
 
 /******************************************************************************
  * build
  * Build the app once, without watching for source file changes.
  ******************************************************************************/
-gulp.task('build', ['sass', 'copy.fonts', 'copy.html', 'copy.scripts'], function(done) {
+gulp.task('build', ['patch-io','patch-ng','sass', 'copy.fonts', 'copy.html', 'copy.scripts'], function(done) {
   return bundleTask(false, done);
 });
 
@@ -60,7 +82,7 @@ gulp.task('sass', function(){
     cascade: false
   };
 
-  return gulp.src('app/theme/app.+(ios|md).scss')
+  return gulp.src('app/theme/app.+(ios|md|wp).scss')
     .pipe(sass({
       includePaths: [
         IONIC_DIR,
@@ -121,15 +143,16 @@ gulp.task('clean', function(done) {
  * and tsify.
  ******************************************************************************/
  function bundleTask(watch) {
-   var b = browserify(
-     ['./app/app.ts', './typings/main.d.ts'],
-     {
-       cache: {},
-       packageCache: {},
-       debug: true //set to false to disable sourcemaps
-     }
-   )
-   .plugin(tsify);
+     var b = browserify(
+       ['./app/app.ts', './typings/main.d.ts'],
+       {
+           cache: {},
+           packageCache: {},
+           debug: true //set to false to disable sourcemaps
+       }
+     )
+     .plugin(tsify, { noImplicitAny: false });
+     
 
    if (watch) {
      b = watchify(b);
@@ -143,8 +166,14 @@ gulp.task('clean', function(done) {
 
    function bundle() {
      return b.bundle()
-       .on('error', function(err){ console.error(err.toString()); })
-       .pipe(fs.createWriteStream('www/build/js/app.bundle.js'));
-   }
+       .on('error', function(err){ console.error(err.toString()); })       
+      .pipe(source('app.js'))
+      .pipe(buffer())
+      .pipe(sourcemaps.init({ loadMaps: true }))
+      .pipe(sourcemaps.write('./',{
+          includeContent: true,
+          sourceRoot: '../../../'}))
+      .pipe(gulp.dest('./www/build/js'));
+    }
  }
 

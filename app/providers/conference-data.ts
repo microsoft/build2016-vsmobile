@@ -71,7 +71,11 @@ export class ConferenceData {
         }
       });
     }
+
+    session.favorite = this.user.hasFavorite(session.name);
   }
+
+  
 
   getTimeline(dayIndex, queryText='', excludeTracks=[], segment='all') {
     return this.load().then(data => {
@@ -85,6 +89,8 @@ export class ConferenceData {
         group.hide = true;
 
         group.sessions.forEach(session => {
+        
+          session.favorite = this.user.hasFavorite(session.name);
           // check if this session should show or not
           this.filterSession(session, queryWords, excludeTracks, segment);
 
@@ -92,6 +98,7 @@ export class ConferenceData {
             // if this session is not hidden then this group should show
             group.hide = false;
             day.shownSessions++;
+
           }
         });
 

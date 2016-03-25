@@ -1,10 +1,18 @@
-
 .login-page .logo {
   padding: 20px 0;
-  min-height: 200px;
+  margin: 40px;
   text-align: center;
 }
 
 .login-page .logo img {
   max-width: 150px;
+}
+
+.imageStyling {
+    text-align: center;
+    
+    img {
+        width: 250px;  
+       padding: 0px 15px 20px 15px;  
+    }
 }

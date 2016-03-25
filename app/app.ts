@@ -1,12 +1,13 @@
 import 'es6-shim/es6-shim.min';
 
-import {App, IonicApp, Events} from 'ionic-angular';
+import {App, IonicApp, Events, Platform} from 'ionic-angular';
 import {ConferenceData} from './providers/conference-data';
 import {UserData} from './providers/user-data';
 import {TabsPage} from './pages/tabs/tabs';
 import {LoginPage} from './pages/login/login';
 import {SignupPage} from './pages/signup/signup';
 import {TutorialPage} from './pages/tutorial/tutorial';
+import {LogOutPage} from './pages/logout/logout';
 
 interface PageObj {
   title: string;
@@ -37,29 +38,28 @@ class ConferenceApp {
     { title: 'About', component: TabsPage, index: 3, icon: 'information-circle' },
   ];
   loggedInPages: PageObj[] = [
-    { title: 'Logout', component: TabsPage, icon: 'log-out' }
+    { title: 'Logout', component: LogOutPage, icon: 'log-out' }
   ];
   loggedOutPages: PageObj[] = [
     { title: 'Login', component: LoginPage, icon: 'log-in' },
     { title: 'Signup', component: SignupPage, icon: 'person-add' }
   ];
-  rootPage: any = TutorialPage;
+  rootPage: any = TabsPage;
   loggedIn = false;
 
   constructor(
     private app: IonicApp,
     private events: Events,
     private userData: UserData,
-    confData: ConferenceData
+    private platform: Platform,
+    private confData: ConferenceData
   ) {
+
     // load the conference data
     confData.load();
 
-    // decide which menu items should be hidden by current login status stored in local storage
-    this.userData.hasLoggedIn().then((hasLoggedIn) => {
-      this.loggedIn = (hasLoggedIn == 'true');
-    });
-
+    this.loggedIn = this.userData.loggedIn;
+    
     this.listenToLoginEvents();
   }
 
@@ -74,7 +74,7 @@ class ConferenceApp {
     } else {
       nav.setRoot(page.component);
     }
-
+    
     if (page.title === 'Logout') {
       // Give the menu time to close before changing to logged out
       setTimeout(() => {
@@ -85,11 +85,7 @@ class ConferenceApp {
 
   listenToLoginEvents() {
     this.events.subscribe('user:login', () => {
-      this.loggedIn = true;
-    });
-
-    this.events.subscribe('user:signup', () => {
-      this.loggedIn = true;
+        this.loggedIn = true;
     });
 
     this.events.subscribe('user:logout', () => {

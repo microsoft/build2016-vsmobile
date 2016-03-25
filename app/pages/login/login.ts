@@ -8,21 +8,15 @@ import {UserData} from '../../providers/user-data';
   templateUrl: 'build/pages/login/login.html'
 })
 export class LoginPage {
-  login: {username?: string, password?: string} = {};
-  submitted = false;
 
-  constructor(private nav: NavController, private userData: UserData) {}
-
-  onLogin(form) {
-    this.submitted = true;
-
-    if (form.valid) {
-      this.userData.login();
-      this.nav.push(TabsPage);
-    }
+  constructor(private nav: NavController, private userData: UserData) {
+      if (this.userData.loggedIn) {
+        this.nav.push(TabsPage);    
+      }
   }
 
-  onSignup() {
-    this.nav.push(SignupPage);
+  doLogin(provider:string){
+      this.userData.login(provider);  
+      this.nav.push(TabsPage);
   }
 }

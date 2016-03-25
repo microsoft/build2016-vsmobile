@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'ionic-conference-app',
+  name: 'build2016-vsmobile',
   proxies: null,
 
   paths: {

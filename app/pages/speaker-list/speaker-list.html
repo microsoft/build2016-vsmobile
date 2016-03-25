@@ -22,22 +22,10 @@
         <button ion-item *ngFor="#session of speaker.sessions" (click)="goToSessionDetail(session)">
           <h3>{{session.name}}</h3>
         </button>
-        <button ion-item (click)="goToSpeakerDetail(speaker)">
+        <!--<button ion-item (click)="goToSpeakerDetail(speaker)">
           <h3>About {{speaker.name}}</h3>
-        </button>
+        </button>-->
       </ion-list>
     </ion-card-content>
-
-    <ion-item>
-      <button (click)="goToSpeakerTwitter(speaker)" clear item-left>
-        <ion-icon name="logo-twitter"></ion-icon>
-        Tweet
-      </button>
-      <button (click)="openSpeakerShare(speaker)" clear item-right>
-        <ion-icon name="share"></ion-icon>
-        Share
-      </button>
-    </ion-item>
-
   </ion-card>
 </ion-content>

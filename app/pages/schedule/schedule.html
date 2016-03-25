@@ -1,5 +1,5 @@
 <ion-navbar *navbar class="hide-border">
-  <button menuToggle>
+  <button menuToggle >
     <ion-icon name="menu"></ion-icon>
   </button>
 
@@ -28,6 +28,15 @@
 </ion-toolbar>
 
 <ion-content class="schedule">
+    <ion-refresher (refresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="Pull to refresh"
+          refreshingSpinner="circles"
+          refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
+
   <ion-list [hidden]="shownSessions === 0">
 
     <ion-item-group *ngFor="#group of groups" [hidden]="group.hide">
@@ -39,7 +48,7 @@
       <ion-item-sliding *ngFor="#session of group.sessions" #slidingItem [attr.track]="session.tracks[0] | lowercase" [hidden]="session.hide">
 
         <button ion-item (click)="goToSessionDetail(session)">
-          <h3>{{session.name}}</h3>
+          <h3><ion-icon name="ios-star-outline" [hidden]="!session.favorite"></ion-icon> {{session.name}}</h3>
           <p>
             {{session.timeStart}} &mdash;
             {{session.timeEnd}}:
@@ -48,8 +57,11 @@
         </button>
 
         <ion-item-options>
-          <button favorite (click)="addFavorite(slidingItem, session)" *ngIf="segment === 'all'">
+          <button favorite (click)="addFavorite(slidingItem, session)" *ngIf="segment === 'all'" [hidden]="session.favorite">
             Favorite
+          </button>
+           <button danger (click)="removeFavorite(slidingItem, session)" [hidden]="!session.favorite">
+            Remove
           </button>
         </ion-item-options>
 

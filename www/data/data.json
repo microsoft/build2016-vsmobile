@@ -2,126 +2,240 @@
 
   "schedule": [
     {
-      "date": "2047-05-17",
+      "date": "2016-03-30",
       "groups": [
-        {
-          "time": "8:00 am",
-          "sessions": [
-            {
-              "name": "Breakfast",
-              "timeStart": "8:00 am",
-              "timeEnd": "9:00 am",
-              "location": "Main hallway",
-              "tracks": ["Food"]
-            }
-          ]
-        },
-        {
-          "time": "9:00 am",
-          "sessions": [
-            {
-              "name": "Introduction to Appcamp.io",
-              "location": "Room 2203",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Brandy Carney"],
-              "timeStart": "9:00 am",
-              "timeEnd": "9:30 am",
-              "tracks": ["Ionic"]
-            },
-            {
-              "name": "Getting started with Ionic",
-              "location": "Room 2202",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Max Lynch"],
-              "timeStart": "9:30 am",
-              "timeEnd": "9:45 am",
-              "tracks": ["Ionic"]
-            },
-            {
-              "name": "Tooling for Ionic",
-              "location": "Room 2201",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Tim Lancina"],
-              "timeStart": "9:45 am",
-              "timeEnd": "10:00 am",
-              "tracks": ["Tooling"]
-            }
-          ]
-        },
-        {
-          "time": "10:00 am",
-          "sessions": [
-            {
-              "name": "Migrating to Ionic2",
-              "location": "Room 2201",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Adam Bradley", "Mike Hartington"],
-              "timeStart": "10:00 am",
-              "timeEnd": "10:15 am",
-              "tracks": ["Ionic"]
-            },
-            {
-              "name": "The evolution of Ionicons",
-              "location": "Room 2202",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Ben Sperry", "Adam Bradley"],
-              "timeStart": "10:15 am",
-              "timeEnd": "10:30 am",
-              "tracks": ["Design"]
-            },
-            {
-              "name": "Ionic.io Services",
-              "location": "Room 2202",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Eric Bobbitt"],
-              "timeStart": "10:30 am",
-              "timeEnd": "11:00 am",
-              "tracks": ["Services"]
-            }
-          ]
-        },
         {
           "time": "11:00 am",
           "sessions": [
             {
-              "name": "Ionic Workshop",
-              "location": "Room 2201",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Perry Govier", "Mike Hartington"],
+              "name": "Continuum for Phone",
+              "location": "Main Theater",
+              "description": "With Windows 10, your phone can work like your PC.  Continuum for phone enables you to connect a Windows mobile device to any external display with the new Microsoft Display Dock, USB-C, or Miracast.   Users can leverage a keyboard and mouse and other peripherals to get the productivity and entertainment value of a PC with the portability, cost, and convenience of a single device. Come see Continuum in action!",
+              "speakerNames": [ "Issa Khoury", "Liz Threlkeld" ],
               "timeStart": "11:00 am",
-              "timeEnd": "11:45 am",
-              "tracks": ["Workshop"]
+              "timeEnd": "11:30 am",
+              "tracks": [ "MainTheater" ]
             },
             {
-              "name": "Community Interaction",
-              "location": "Room 2203",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Mike Hartington", "Katie Ginder-Vogel"],
-              "timeStart": "11:30 am",
-              "timeEnd": "11:50 am",
-              "tracks": ["Communication"]
-            },
-            {
-              "name": "Navigation in Ionic",
-              "location": "Room 2203",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Tim Lancina", "Adam Bradley"],
+              "name": "A lap around Azure’s open source driven innovation, Part I: shipping penguins in the cloud",
+              "location": "Moscone 2005",
+              "description": "The cloud has a lot going on, and open source plays a key role when it comes to cloud innovation. From unikernels to aPaaS, and from DevOps to managed services, open is where things are happening. Join us at //build for a 2-part series on how Azure approaches open source innovation in the cloud  Part 1 – Fabric & Applications. Let’s talk about what’s in store for Java and Node.js developers in Azure – from PaaS to SDKs, whether you run in application servers like JBoss, in container platforms like Docker+Mesos or OpenShift or whether you build your own multi-cloud environments with Terraform, Azure and its partners work 24/7 to get you trusted technology stacks with scale and agility.  Join us to discover how Azure can help you harness the power of open source innovation today, and start writing your open journey in the cloud.",
+              "speakerNames": [ "Boris Baryshnikov", "Burzin Patel", "David Justice", "Jose Miguel Parrella" ],
               "timeStart": "11:30 am",
               "timeEnd": "12:00 pm",
-              "tracks": ["Navigation"]
-            }
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "Building a Conversational Bot – 0-60",
+              "location": "Marriott Salon 9",
+              "description": "The Microsoft Bot Framework provides everything you need to build and connect your bots to your users wherever they converse – from SMS to Office365 mail to Slack and more… It’s your bot, wherever your users are talking. Learn how to use the Bot Framework to build a bot with your own existing code, use the Bot Builder to generate conversational dialogs from scratch, and more to give your bot skills with natural language processing and deep learning technology. Walk away with tools to build a great bot that can connect with users, wherever they are.",
+              "speakerNames": [ "Dan Driscoll", "Lili Cheng", "Tom Laird-McConnell" ],
+              "timeStart": "11:30 am",
+              "timeEnd": "12:00 pm",
+              "tracks": [ "Breakout" ]
+            },          
+            {
+              "name": "Cross-platform Mobile with Apache Cordova",
+              "location": "Moscone 2004",
+              "description": "When speed-to-market is your top priority, nothing gets your mobile app to market more quickly than Apache Cordova. Cordova eliminates redundant code by using a shared JavaScript API to access native APIs on iOS, Android and Windows. Now, with the addition of Ionic Framework, developers also have access to an open-source front-end SDK providing performance-obsessed UI controls that adapt to the look-and-feel of native platforms. Join us on a tour of platform capabilities using VS Code, Visual Studio Team Services, Ionic, Azure Mobile Services, CodePush and more to create a Build Conference App.",
+              "speakerNames": [ "Ryan Salva" ],
+              "timeStart": "11:30 am",
+              "timeEnd": "12:00 pm",
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "Designing Hybrid applications that span Azure and Azure Stack",
+              "location": "Moscone 2001",
+              "description": "Learn what is hybrid, why it matters and how to develop and operate apps across Microsoft clouds.",
+              "speakerNames": [ "Igor Sedukhin" ],
+              "timeStart": "11:30 am",
+              "timeEnd": "12:00 pm",
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "DevOps Tools for Every Development Team",
+              "location": "Marriott Salon 7",
+              "description": "Take a guided tour of Visual Studio Team Services & Team Foundation Server with Jeremy Epling and Donovan Brown. DevOps is the union of people, process, and tools to enable continuous delivery of value to our end users. During this session we are going to show you the products & services that will shape your process and enable your team to build amazing applications.  We will share several new announcements to help your team adopt new DevOps practices!",
+              "speakerNames": [ "Donovan Brown", "Edith Harbaugh", "Jeremy Epling", "Steve Jones" ],
+              "timeStart": "11:30 am",
+              "timeEnd": "12:00 pm",
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "Top 6 Reasons to Move your C++ Code to VS2015",
+              "location": "Marriott Salon 6",
+              "description": "Visual Studio 2015 provides the best in class C++ development experience whether you are targeting Windows, Android, iOS, Linux or IoT. With a good mix of demos and showcase for new C++ experiences, this talk goes over six great reasons why you should migrate to Visual Studio 2015 today.",
+              "speakerNames": [ "Ankit Asthana", "Marian Luparu" ],
+              "timeStart": "11:30 am",
+              "timeEnd": "12:00 pm",
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "Universal App Model Overview:  What’s New in the UWP App Model",
+              "location": "Marriott Salon 8",
+              "description": "The UWP App Model encompasses the way that apps are packaged and installed, how they store data and state, their background process and multitasking capabilities, their run/suspend/resume lifecycle, their navigation model, and how they are uninstalled.   In this session, Andrew will introduce the new app model capabilities ranging from app deployment improvements, enabling your existing desktop apps to take advantage of UWP through to exciting new capabilities to drive app engagement on all your devices.",
+              "speakerNames": [ "Andrew Clinick", "Cory Hendrixson" ],
+              "timeStart": "11:30 am",
+              "timeEnd": "12:00 pm",
+              "tracks": [ "Breakout" ]
+            } ,
+            {
+              "name": "Cross-Platform Mobile Development 1: Xamarin",
+              "location": "2020",
+              "description": "Learn how you can leverage Visual Studio and Xamarin to develop cross-platform mobile applications across iOS, Android and Windows. In this workshop you will learn best practices from Microsoft and Xamarin for architecting and testing your apps to increase agility and overall quality. You will also create and use a new project in Visual Studio Team Services.",
+              "speakerNames": [ "Instructor" ],
+              "timeStart": "11:30 am",
+              "timeEnd": "12:00 pm",
+              "tracks": [ "CodeLab" ]
+            } ,
+            {
+              "name": "Data Development 1: Gain near Realtime Insights with IoT Analytics",
+              "location": "2016",
+              "description": "In today's data & age, it is important to move fast. Gone are the days when you had to wait for more than 24 hours for your data to be processed in order to get insights and make decisions. In this code lab module, we will walk you through creating a solution that helps you get from 0 to insights in 60 minutes. We will analyze the activity on an application and get a better understanding of the app's audience and patterns using services from the Cortana Analytics suite. We will be using Azure Event Hubs, Stream Analytics and PowerBI to analyze and visualize our data. We will also be looking at DocumentDB, a document datastore.",
+              "speakerNames": [ "Instructor" ],
+              "timeStart": "11:30 am",
+              "timeEnd": "12:00 pm",
+              "tracks": [ "CodeLab" ]
+            } ,
+            {
+              "name": "Game Development 1: Introduction to Unity",
+              "location": "2014",
+              "description": "Learn how to create 2D games in Unity, the leading industry game engine. In this workshop you’ll learn coding for Unity, animations, platform builds, physics, and more as you experience building out a 2D game named ‘Orks with Forks (and Knives)’",
+              "speakerNames": [ "Instructor" ],
+              "timeStart": "11:30 am",
+              "timeEnd": "12:00 pm",
+              "tracks": [ "CodeLab" ]
+            },
+            {
+              "name": "IoT Development 1: Intro to Windows 10 IoT Core on Raspberry Pi 3y",
+              "location": "2018",
+              "description": "Did you know Windows 10 runs on the Raspberry Pi? In this lab, get hands-on experience building a UWP app which runs on tiny devices. Learn how to build, deploy, and debug your app, and how to configure the device.",
+              "speakerNames": [ "Instructor" ],
+              "timeStart": "11:30 am",
+              "timeEnd": "12:00 pm",
+              "tracks": [ "CodeLab" ]
+            },
+            {
+              "name": "UWP Development 1: Building an Adaptive UI",
+              "location": "2009",
+              "description": "Get hands-on with building a UI for a XAML and C# UWP app that looks great across all your user's devices. Implement an adaptive UI that scales and adapts across different screens, try it out on Continuum for Mobile, and add in an Xbox UI. Create great Maps experiences using 3D and Streetside and implement eye-catching tiles using adaptive tile templates.",
+              "speakerNames": [ "Instructor" ],
+              "timeStart": "11:30 am",
+              "timeEnd": "12:00 pm",
+              "tracks": [ "CodeLab" ]
+            },
+            {
+              "name": "Web Development 1: Intro to ASP.NET Core 1.0",
+              "location": "2011",
+              "description": "ASP.NET Core is a new open-source, cross-platform, high performance and lightweight framework for building Web Applications using .NET. Learn how to create a simple ASP.NET Core project using Visual Studio 2015 in Windows, as well as a simple web application using Yeoman and Visual Studio Code in Ubuntu.",
+              "speakerNames": [ "Instructor" ],
+              "timeStart": "11:30 am",
+              "timeEnd": "12:00 pm",
+              "tracks": [ "CodeLab" ]
+            },
+            {
+              "name": "Build cool apps with the Microsoft Graph, tap into the intelligence and reach millions of users",
+              "location": "Main Theater",
+              "description": "Join this session to learn how easy it is to use the Microsoft Graph to build apps. In the first part we will show apps that access data from the consumer cloud and the commercial cloud using a single code base. In the second part we will show how apps can access rich insights and rich relationships calculated by the Office Graph, the same technology that powers Delve, now exposed in APIs. The Microsoft Graph is the gateway to Office 365 and Microsoft cloud data, insights and rich relationships. Is the easiest way to integrate with user’s data and build smarter and contextual aware applications that leverage the power of Office.",
+              "speakerNames": [ "Dan Kershaw", "Yina  Arenas" ],
+              "timeStart": "11:40 am",
+              "timeEnd": "12:40 pm",
+              "tracks": [ "MainTheater" ]
+            },
+            {
+              "name": "Bringing 2+U to Life: From Scale Model to Environment ",
+              "location": "Empowering Business Theater",
+              "description": "",
+              "speakerNames": [ "Boaz Ashkenazy" ],
+              "timeStart": "11:40 am",
+              "timeEnd": "12:40 pm",
+              "tracks": [ "MiniTheater" ]
+            },
+            {
+              "name": "Build cool apps with the Microsoft Graph, tap into the intelligence and reach millions of users",
+              "location": "Seizing Opportunities Theater",
+              "description": "Azure Marketplace is the place where Azure customers and partners meet. Come learn why use the marketplace and how to deploy and manage single and multi-tier solutions. As an existing or potential partner, we will also drill down and show case how to build and publish new solutions using Azure marketplace taking advantage of Azure resource manager (ARM) and Azure extensibility models and the benefits of using the platform to go to market for your solutions. Once you build an application that delights your customers, you can monetize it through the Microsoft Azure Marketplace. In this session, you will also hear about new upcoming Test Drive solutions.",
+              "speakerNames": [ "Khalid Mouss" ],
+              "timeStart": "11:40 am",
+              "timeEnd": "12:40 pm",
+              "tracks": [ "MiniTheater" ]
+            },
+            {
+              "name": "Using the Microsoft Band with Windows 10 Background events",
+              "location": "User Experiences Theater",
+              "description": "In this session, we'll highlight recent updates to the latest Microsoft Band SDK, and how to use them to use the UWP background execution model to create interactive experiences on the Microsoft Band.",
+              "speakerNames": [ "Ali Alvi", "Tony Andrews" ],
+              "timeStart": "11:40 am",
+              "timeEnd": "12:40 pm",
+              "tracks": [ "MiniTheater" ]
+            }              
           ]
         },
         {
           "time": "12:00 pm",
           "sessions": [
             {
-              "name": "Lunch",
-              "location": "Auditorium",
-              "description": "Come grab lunch with all the Ionic fanatics and talk all things Ionic",
-              "timeStart": "12:00 pm",
+              "name": "Five Core Application Design Patterns for Microsoft HoloLens",
+              "location": "User Experiences Theater",
+              "description": "",
+              "speakerNames": [ "Adrian Ferrier" ],
+              "timeStart": "12:10 pm",
               "timeEnd": "1:00 pm",
-              "tracks": ["Food"]
+              "tracks": [ "MiniTheater" ]
+            }, 
+            {
+              "name": "Leveraging the new Azure CDN APIs to build “Wicked Fast” Applications",
+              "location": "Seizing Opportunities Theater",
+              "description": "Azure CDN offers developers a new CDN object model, APIs, and multiple SDKs to help you build global applications with massive scale, high performance and security.  We will quickly walk you through the Azure CDN solution space. Next, we will demonstrate how easy it is to use the APIs to provide you the performance, reliability, and security you need to build world class applications.",
+              "speakerNames": [ "Kevin Zhang", "Manling  Zhang" ],
+              "timeStart": "12:10 pm",
+              "timeEnd": "1:00 pm",
+              "tracks": [ "MiniTheater" ]
+            },
+            {
+              "name": "Surface Hub: Designing and Building UWP Apps for the Large Screen",
+              "location": "Empowering Business Theater",
+              "description": "Designing for the Surface Hub means more than just a large canvas. We'll talk about the challenges and benefits of building a productive Surface Hub experience.",
+              "speakerNames": [ "Michael Hilsdale", "Paul Barr" ],
+              "timeStart": "12:10 pm",
+              "timeEnd": "1:00 pm",
+              "tracks": [ "MiniTheater" ]
+            },
+            {
+              "name": "Women's Leadership Panel",
+              "location": "Main Theater",
+              "description": "Join us Wednesday in The Hub during the lunch session for a special Women in Technology-focused set of activities. We will have a panel of women leaders, followed by a special networking event, and then a second panel of women startup leaders. We will discuss topics such as what they think would be the most important piece of advice they received when starting their careers, what keeps them excited about technology, and the best piece of advice they would give young women looking into STEM careers today.",
+              "speakerNames": [ "Sonya Koptyev" ],
+              "timeStart": "12:30 pm",
+              "timeEnd": "1:00 pm",
+              "tracks": [ "MainTheater" ]
+            },
+            {
+              "name": "Holoflight: Visualizing flight data in 3D",
+              "location": "Seizing Opportunities Theater",
+              "description": "",
+              "speakerNames": [ "Laurent Bugnion" ],
+              "timeStart": "12:40 pm",
+              "timeEnd": "1:40 pm",
+              "tracks": [ "MiniTheater" ]
+            },
+            {
+              "name": "Instantly releasing updates to your React Native apps",
+              "location": "Empowering Business Theater",
+              "description": "React Native is a compelling platform for building cross-platform mobile apps, and like other JavaScript-based solutions, can take advantage of the ability to perform “hot code pushes” of your code and assets, without needing to submit them to the stores. In this session, we’ll discuss how the CodePush service makes performing over-air-updates easy, and how to integrate it into an existing React Native app",
+              "speakerNames": [ "Jonathan Carter" ],
+              "timeStart": "12:40 pm",
+              "timeEnd": "1:40 pm",
+              "tracks": [ "MiniTheater" ]
+            },
+            {
+              "name": "The Magic Mirror: Powered by a Hosted Web App and Windows 10 on Raspberry Pi",
+              "location": "User Experiences Theater",
+              "description": "Check out a web-based app using a Raspberry Pi and camera to create a mirror that readies the owner to take on their day. In this session, we'll talk about how hosted web apps provide a new way of delivering rich local experiences with dynamic, server-side content.",
+              "speakerNames": [ "Kiril Seksenov" ],
+              "timeStart": "12:40 pm",
+              "timeEnd": "1:40 pm",
+              "tracks": [ "MiniTheater" ]
             }
           ]
         },
@@ -129,31 +243,58 @@
           "time": "1:00 pm",
           "sessions": [
             {
-              "name": "Ionic in the Enterprise",
-              "location": "Room 2201",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Brody Kidd"],
+              "name": "Women's Networking Event",
+              "location": "Main Theater",
+              "description": "Join us Wednesday in The Hub during the lunch session for a special Women in Technology-focused set of activities. We will have a panel of women leaders, followed by a special networking event, and then a second panel of women startup leaders. We will discuss topics such as what they think would be the most important piece of advice they received when starting their careers, what keeps them excited about technology, and the best piece of advice they would give young women looking into STEM careers today. ",
+              "speakerNames": [ "Sonya Koptyev" ],
               "timeStart": "1:00 pm",
-              "timeEnd": "1:15 pm",
-              "tracks": ["Communication"]
+              "timeEnd": "2:00 pm",
+              "tracks": [ "MainTheater" ]
             },
             {
-              "name": "Ionic Worldwide",
-              "location": "Room 2201",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Katie Ginder-Vogel"],
-              "timeStart": "1:15 pm",
-              "timeEnd": "1:30 pm",
-              "tracks": ["Communication"]
+              "name": "2+U Sales Center: The Human Element with HoloLens",
+              "location": "Empowering Business Theater",
+              "description": "",
+              "speakerNames": [ "Richard Dormer" ],
+              "timeStart": "1:10 pm",
+              "timeEnd": "2:00 pm",
+              "tracks": [ "MainTheater" ]
             },
             {
-              "name": "The Ionic package service",
-              "location": "Room 2203",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Dan Imhoff", "Rudy Pelrine"],
+              "name": "Five things you didn’t know you could build with Microsoft Edge",
+              "location": "Seizing Opportunities Theater",
+              "description": "Kick back and watch as we show off cool website code that you may not have thought was possible -- from an immersive game using WebGL to using biometric authentication on your website using Windows Hello.",
+              "speakerNames": [ "Charles Morris", "Sean Lyndersay" ],
+              "timeStart": "1:10 pm",
+              "timeEnd": "2:00 pm",
+              "tracks": [ "MiniTheater" ]
+            },
+            {
+              "name": "Tools for XAML apps in Visual Studio vNext",
+              "location": "User Experiences Theater",
+              "description": "Visual Studio vNext has some great XAML tooling and we'll dive deeper to show you what's new!",
+              "speakerNames": [ "Unni Ravindranathan" ],
+              "timeStart": "1:10 pm",
+              "timeEnd": "2:00 pm",
+              "tracks": [ "MiniTheater" ]
+            },
+            {
+              "name": "Start-up Panel",
+              "location": "Sonya Koptyev",
+              "description": "Join us Wednesday in The Hub during the lunch session for a special Women in Technology-focused set of activities. We will have a panel of women leaders, followed by a special networking event, and then a second panel of women startup leaders. We will discuss topics such as what they think would be the most important piece of advice they received when starting their careers, what keeps them excited about technology, and the best piece of advice they would give young women looking into STEM careers today. ",
+              "speakerNames": [ "Sonya Koptyev" ],
               "timeStart": "1:30 pm",
               "timeEnd": "2:00 pm",
-              "tracks": ["Services"]
+              "tracks": [ "MainTheater" ]
+            },
+            {
+              "name": "Implementing msn.com on Azure",
+              "location": "Seizing Opportunities Theater",
+              "description": "Implementing msn.com on Azure – leveraging Paas, lessons learned, how to scale Azure to handle high-performance enterprise sites (msn.com is taking up to 25K RPS)",
+              "speakerNames": [ "Eugene Chigirinskiy" ],
+              "timeStart": "1:40 pm",
+              "timeEnd": "2:00 pm",
+              "tracks": [ "MiniTheater" ]
             }
           ]
         },
@@ -161,54 +302,226 @@
           "time": "2:00 pm",
           "sessions": [
             {
-              "name": "Push Notifications in Ionic",
-              "location": "Room 2202",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Rudy Pelrine", "Eric Bobbitt"],
+              "name": "A lap around Azure’s open source driven innovation, Part II: hacking data open with the cloud",
+              "location": "Moscone 2005",
+              "description": "The cloud has a lot going on, and open source plays a key role when it comes to cloud innovation. From unikernels to aPaaS, and from DevOps to managed services, open is where things are happening. Join us at //build for a 2-part series on how Azure approaches open source innovation in the cloud  Part 2 – Fabric & Data. It’s a whole new world of data options in the cloud with Azure. From connecting to Azure SQL with new JDBC clients for Ubuntu to deploying sophisticated scale out clusters for Cassandra or MariaDB, Azure and its partners work 24/7 to get you trusted technology stacks with scale and agility.  Join us to discover how Azure can help you harness the power of open source innovation today, and start writing your open journey in the cloud.",
+              "speakerNames": [ "Ben Lackey", "Boris Baryshnikov", "David Justice", "Jose Miguel Parrella", "Matthew Rollender" ],
               "timeStart": "2:00 pm",
               "timeEnd": "2:30 pm",
-              "tracks": ["Services"]
+              "tracks": [ "Breakout" ]
             },
             {
-              "name": "Ionic Documentation",
-              "location": "Room 2202",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Drew Rygh"],
-              "timeStart": "2:30 pm",
-              "timeEnd": "2:45 pm",
-              "tracks": ["Documentation"]
+              "name": "Debugging Tips and Tricks for .NET Developers with Visual Studio",
+              "location": "Marriott Salon 7",
+              "description": "Every software developer has the need to debug problems in code, but we are rarely taught how to use the debugging tools available to us. Come to this demo-driven session where we’ll learn how to supercharge our debugging to find bugs faster. We’ll tour most of the debugger, throwing in tips and tricks as we go along, and show a couple new features coming in vNext. Whatever your experience level we guarantee you’ll learn something new.",
+              "speakerNames": [ "Kaycee Anderson" ],
+              "timeStart": "2:00 pm",
+              "timeEnd": "2:30 pm",
+              "tracks": [ "Breakout" ]
             },
             {
-              "name": "UX planning in Ionic",
-              "location": "Room 2203",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Ben Sperry", "Brandy Carney"],
-              "timeStart": "2:45 pm",
+              "name": "Microsoft Edge: What's next for Microsoft's new browser and web platform",
+              "location": "Moscone 2001",
+              "description": "In 2015, Microsoft launched its first new browser in 20 years: Microsoft Edge. After 8 months, it's on a great trajectory but we're just getting started. Join us to learn about the progress we've made, feedback we've heard, and a whirlwind tour of improvements coming soon. This will include extensions and other new end-user features, plus many new developer features across the HTML/CSS/JavaScript and web app platform, and new Enterprise-focused features for IT Pros.",
+              "speakerNames": [ "Charles Morris", "Sean Lyndersay" ],
+              "timeStart": "2:00 pm",
+              "timeEnd": "2:30 pm",
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "The Future of Visual Studio",
+              "location": "Marriott Salon 9",
+              "description": "Visual Studio is the world’s most beloved IDE. This session will illustrate how Visual Studio is evolving demo by demo. We’ll provide the latest capabilities to allow Any Dev to build Any App. We’ll provide a preview of the streamlined next version of Visual Studio beyond 2015. We’ll see how Visual Studio will continue to make you a more productive developer as you in your day to day dev inner loop. We’ll even provide a back stage peek into how we’re using your feedback to continuously improve Visual Studio.",
+              "speakerNames": [ "Amanda Silver" ],
+              "timeStart": "2:00 pm",
+              "timeEnd": "2:30 pm",
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "What's New in Windows UI/UX for Universal Windows Platform (UWP) apps",
+              "location": "Moscone 2004",
+              "description": "The Universal App Platform provides developers with a real opportunity to create meaningful, familiar and tailored Apps that run across a wide set of device families.  The next version of Windows will provide many new UI/UX features and improvements including enhanced XAML controls, improved XAML design and debug experience, improvements to enable developers to optimize the experience of their Universal Apps on Xbox, enhanced animation and effects system, simplified Inking, new and improved tools plus a few other goodies.  This session will take a lap around most of those features.",
+              "speakerNames": [ "Joe Stegman" ],
+              "timeStart": "2:00 pm",
+              "timeEnd": "2:30 pm",
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "Windows in the Enterprise",
+              "location": "Marriott Salon 8",
+              "description": "Windows 10 is seeing great momentum in the enterprise.  What does it mean for you as either an IT Professional or Enterprise Developer?  Rob Lefferts will look at the things you should know about Windows today and how you should think about it in your organization going forward.",
+              "speakerNames": [ "Brad McCabe", "Brett Polen", "Rob Lefferts" ],
+              "timeStart": "2:00 pm",
+              "timeEnd": "2:30 pm",
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "Intelligence at Your Fingertips: Microsoft knowledge and intelligence APIs",
+              "location": "Main Theater",
+              "description": "Microsoft knowledge and intelligence APIs are a set of artificial intelligence based vision, speech, and language APIs and SDKs that developers can use to make their applications more intelligent, engaging and discoverable on any platform. The technology behind these APIs is the same technology that powers Windows, Xbox, Bing, and other Microsoft products. In this session, we’ll cover how you can use the intelligence APIs to build fresh, differentiated apps powered by advanced research from Microsoft.",
+              "speakerNames": [ "Allison Light", "Anna Roth" ],
+              "timeStart": "2:00 pm",
+              "timeEnd": "2:30 pm",
+              "tracks": [ "MainTheater" ]
+            },
+            {
+              "name": "A lap around ChakraCore – Microsoft’s open source JavaScript engine",
+              "location": "Seizing Opportunities Theater",
+              "description": "In January 2016, ChakraCore went open source and development moved to GitHub. This talk will introduce you to ChakraCore, how you can embed it to enable scripting in your apps and services, and showcase how ChakraCore is on the bleeding edge of language support with features from ES6, ES2016 and beyond. It will also cover where we’re headed next including using ChakraCore with Node.js, bringing innovation to advance the state of the art of JavaScript debugging and updates on our cross-platform journey.",
+              "speakerNames": [ "Brian Terlson", "Gaurav  Seth - Chakra" ],
+              "timeStart": "2:10 pm",
               "timeEnd": "3:00 pm",
-              "tracks": ["Design"]
+              "tracks": [ "MiniTheater" ]
             }
           ]
         },
         {
-          "time": "3:00",
+          "time": "3:00 pm",
           "sessions": [
             {
-              "name": "Directives in Ionic",
-              "location": "Room 2201",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Max Lynch"],
+              "name": "Building a 3D game with Unity and Visual Studio in 30 minutes",
+              "location": "Main Theater",
+              "description": "Making that first pull request to an open source project can be a scary and daunting thing, even for a seasoned developer. “What if people laugh at my code? What if I break something? What if I didn’t squash my commit correctly?” Learning the ropes can be challenging, not just the technical but also the social aspects. In this session, Scott Hanselman demystifies the magic of open source development and gives you practical advice on how to get started and get along with open source communities.",
+              "speakerNames": [ "J Bevain" ],
               "timeStart": "3:00 pm",
               "timeEnd": "3:30 pm",
-              "tracks": ["Angular"]
+              "tracks": [ "MainTheater" ]
             },
             {
-              "name": "Mobile States",
-              "location": "Room 2202",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Tim Lancina"],
+              "name": "Best of Visual Studio Code: Trips and Tricks",
+              "location": "Marriott Salon 6",
+              "description": "Come see the best new Visual Studio Code features that you didn't know existed, but won't be able to live without!  We'll demo Power-User features, including debugging on-the-fly, intelliSense for your favorite JS modules, and other editor hacks. We’ll also demonstrate the best new and popular extensions from the marketplace.",
+              "speakerNames": [ "Wade Anderson" ],
               "timeStart": "3:30 pm",
-              "timeEnd": "3:45 pm",
-              "tracks": ["Navigation"]
+              "timeEnd": "4:00 pm",
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "Building Applications using the Azure Container Service",
+              "location": "Moscone 2001",
+              "description": "Everyone loves a Docker Container. Many people love two, or three or maybe even four. However, once we start to build real world applications using Docker Containers we start to uncover those annoying little details that make them harder to love. Azure Container Service is a new (preview) service that seeks to make you love containers regardless of how many you deploy. In this session we’ll look at Azure’s container strategy from the beginning to today and on into the near future. We’ll see plenty of practical demos and look at why the Azure Container Service is necessary.",
+              "speakerNames": [ "Ross Gardler", "Saurya  Das" ],
+              "timeStart": "3:30 pm",
+              "timeEnd": "4:00 pm",
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "IoT: Microsoft IoT Vision and Roadmap",
+              "location": "Marriott Salon 7",
+              "description": "Microsoft is all in on IoT. Come and learn the latest on both Azure and Windows offerings for IoT and where they are going.  Microsoft has great offerings for both operating systems and cloud solutions in the incredibly exciting Internet of Things space.",
+              "speakerNames": [ "Brett Bentsen", "Sam George" ],
+              "timeStart": "3:30 pm",
+              "timeEnd": "4:00 pm",
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "Microsoft Identity: State of the Union and Future Direction",
+              "location": "Moscone 2004",
+              "description": "Microsoft identity technology has been powering consumers and business solutions for decades, anticipating and contributing to industry trends such as the move to the cloud. Come to this session to learn about today’s state of the art of identity management and Microsoft’s vision for identity.",
+              "speakerNames": [ "Vittorio Bertocci" ],
+              "timeStart": "3:30 pm",
+              "timeEnd": "4:00 pm",
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "What's new in TypeScript?",
+              "location": "Marriott Salon 9",
+              "description": "TypeScript has seen enormous growth in the past year. Today, it is used to build several key frameworks like AngularJS, Ionic etc. Several large applications such as Visual Studio Code and Office Web Applications are also built using the same, with more coming online every day. Are you curious why marquee frameworks and large scale apps choose TypeScript? In this talk, we'll go through how TypeScript enables you to leverage features from the current and future of JavaScript while increasing the productivity of JavaScript development across the board. We'll talk about some of the latest features of TypeScript, including future ECMAScript proposals such as Async Functions, support for Angular and React/JSX, the state of the art type system capabilities, and how it all comes together to make working and creating things in JavaScript more productive and fun with TypeScript.",
+              "speakerNames": [ "Anders Hejlsberg" ],
+              "timeStart": "3:30 pm",
+              "timeEnd": "4:00 pm",
+              "tracks": [ "Breakout" ]
+            }
+          ]
+        },
+        {
+          "time": "4:00 pm",
+          "sessions": [
+            {
+              "name": "Automate Business Process with Logic Apps (Deep Dive)",
+              "location": "User Experiences Theater",
+              "description": "See how you can use Azure Logic Apps to automate business processes that integrate with services in the cloud without using code. This session will show how to best take advantage of different Logic App capabilities, understanding the deployment model, and taking a look at Logic Apps through the lens of business intelligence.",
+              "speakerNames": [ "Jim Harrer", "Kevin Lam" ],
+              "timeStart": "4:10 pm",
+              "timeEnd": "5:00 pm",
+              "tracks": [ "MiniTheater" ]
+            },
+            {
+              "name": "Tips for using the F12 Edge dev tools",
+              "location": "Empowering Business Theater",
+              "description": "This talk will cover tips & demos to make you more productive diagnosing issues in Edge, specifically looking at: working with CSS (changes, editing & diffing), pro tips for making JavaScript debugging a little less painful (set next statement, just my code, etc.) and using the F12 Edge Developer tools to debug & profile UWPs.",
+              "speakerNames": [ "Andy Sterland" ],
+              "timeStart": "4:10 pm",
+              "timeEnd": "5:00 pm",
+              "tracks": [ "MiniTheater" ]
+            },
+            {
+              "name": "How to Train your Robot with Sensors and Bluetooth",
+              "location": "User Experiences Theater",
+              "description": "Watch how a Universal Windows Platform app can use a combination of Bluetooth and sensor APIs to teach a robot how to respond to contextual changes in the world around it.",
+              "speakerNames": [ "Kiran Pathakota", "Rinku Sreedhar" ],
+              "timeStart": "4:10 pm",
+              "timeEnd": "5:00 pm",
+              "tracks": [ "MiniTheater" ]
+            }
+          ]
+        },
+        {
+          "time": "5:00 pm",
+          "sessions": [
+            {
+              "name": "A Lap Around R Tools for Visual Studio",
+              "location": "Marriott Salon 8",
+              "description": "Do you have data to analyze? Do you want to create a predictive model? Do you want to do it quickly, interactively, and with cutting-edge visualizations? Do you want to leverage the work of the world’s best statisticians and machine-learning experts by using their libraries? Oh, and do you love Visual Studio? If so, you don’t want to miss this session, where I’ll take you on a tour of the R language, some key libraries, and how you can build and debug an app – all using our latest tooling for R: R Tools for Visual Studio.",
+              "speakerNames": [ "John Lam" ],
+              "timeStart": "5:00 pm",
+              "timeEnd": "6:00 pm",
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "The Future of Game Development on Windows",
+              "location": "Marriott Salon 6",
+              "description": "In 2015, Windows and Xbox shared how we were building the world's most accessible and powerful game development platform that spans across consoles, PC, tablets, phones, and more. Come join us in 2016 to see how we are delivering on our vision & are empowering game developers to reach billions of customers around the world, connected through the power of Xbox Live and our Windows Store, plus a host of new platform innovations for games in every genre.",
+              "speakerNames": [ "Jason Ronald", "Radu Mocanita" ],
+              "timeStart": "5:00 pm",
+              "timeEnd": "6:00 pm",
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "Using the Windows Bridge for iOS to build UWP apps",
+              "location": "Marriott Salon 7",
+              "description": "In this session, you’ll learn about the Windows Bridge for iOS, an open-source project that allows you to use Objective-C code and iOS APIs to build Universal Windows Platform (UWP) apps. We'll show some highlights from recent updates, discuss our development roadmap, and show off some apps that are already using the bridge. We’ll also take a deeper dive into the bridge's runtime, compiler, APIs and tooling. You'll leave this session with advice and best practices for bringing your iOS apps to Windows 10.",
+              "speakerNames": [ "Dustin Howett", "Nick Gerard", "Ryan Haning", "Salmaan Ahmed" ],
+              "timeStart": "5:00 pm",
+              "timeEnd": "6:00 pm",
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "Visual Studio 2015 Extensibility",
+              "location": "Moscone 2005",
+              "description": "Extending Visual Studio with new capabilities is something that can make our lives easier and greatly improve our overall developer happiness on a daily basis. It can also be a challenge to learn where to start and be able to write an extension with confidence. In this session, Mads writes an extension from scratch live on stage, then integrates with GitHub, automates the build process and deploys the finished extension to the Visual Studio Marketplace. This is a must-see session for anyone interested in Visual Studio extensibility.",
+              "speakerNames": [ "Mads Kristensen" ],
+              "timeStart": "5:00 pm",
+              "timeEnd": "6:00 pm",
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "Windows Store and Dev Center Overview: New capabilities for helping developers succeed",
+              "location": "Moscone 2001",
+              "description": "Learn about new features the Windows Store and Dev Center is adding to help developers.  See the new types of items are being added to the Store. Learn how adding these items to the Store is easier than ever.  Hear about new ways to attract, engage and monetize users.  Find ways to deeply analyze what your users are doing through analytics and direct feedback.  See how to bring the products you build to the entire family of Windows devices around the globe.",
+              "speakerNames": [ "Ashish Babbar", "Fred Delombaerde", "Geoff Robertson", "Mike  Clark" ],
+              "timeStart": "5:00 pm",
+              "timeEnd": "6:00 pm",
+              "tracks": [ "Breakout" ]
+            },
+            {
+              "name": "Inside the Windows Insider Program",
+              "location": "Main Theater",
+              "description": "Join us to hear from two of the principal architects of the Windows Insider Program for a candid conversation about the past, present, and future of the program. They will share some of the history, provide a peek inside the day to day operations, and share some thoughts on how it will evolve in the future. The Windows Insider Program is the largest public preview program in Microsoft history and has been an important source of customer feedback used to develop Windows 10. More than 7 Million people have signed up to receive preview builds, report problems, and share suggestions to help make Windows 10 great.",
+              "speakerNames": [ "Gabriel Aul", "Vasilios Karagounis" ],
+              "timeStart": "5:10 pm",
+              "timeEnd": "6:00 pm",
+              "tracks": [ "MainTheater" ]
             }
           ]
         }
@@ -219,115 +532,230 @@
 
   "speakers": [
     {
-      "name": "Eric Bobbitt",
-      "profilePic": "https://avatars3.githubusercontent.com/u/19638?v=3",
-      "twitter": "ericbobbitt",
-      "about": "When he's not arguing semantics, dancing at all the wrong times, or drawing randomly on the office whiteboards, you'll find him working on the Ionic Platform, planning new features, and not-so-silently cursing at his laptop. Otherwise he's probably feeding his gaming addiction with a glass of whiskey or a good Belgian beer.",
-      "location": "Madison, WI"
+      "name": "Issa Khoury",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
     },
     {
-      "name": "Adam Bradley",
-      "profilePic": "https://avatars2.githubusercontent.com/u/452425?v=3",
-      "twitter": "adamdbradley",
-      "about": "Co-creator of Ionic Framework and Angular Material Design team member. Regularly writes and speaks about hybrid development with Ionic and Angular. Proud dad, husband, veteran, and dog's best friend. Based in beautiful Madison, WI.",
-      "location": "Madison, WI"
+      "name": "Liz Threlkeld",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
     },
     {
-      "name": "Brandy Carney",
-      "profilePic": "https://avatars0.githubusercontent.com/u/6577830?v=3",
-      "twitter": "brandyscarney",
-      "about": "When she isn't busy keeping her two chihuahuas from killing each other, Brandy can be found making the Ionic SDK pretty by means of Sass. She loves helping people while continuing to expand her own knowledge. After hours she can be found on her patio shopping online with a glass of wine in hand. Give her a glass and she'll write some Sass.",
-      "location": "Jacksonville, FL"
+      "name": "Boris Baryshnikov",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
     },
     {
-      "name": "Katie Ginder-Vogel",
-      "profilePic": "https://avatars2.githubusercontent.com/u/8117985?v=3",
-      "twitter": "katiegv",
-      "about": "Katie handles Ionic’s marketing, communications, and editorial, writing blog posts about unique Ionic apps and dreaming up new ways to bring Ionic to developers around the world. Outside the office, she can be found on land, running or hiking, or in the water, swimming and paddleboarding.",
-      "location": "Madison, WI"
+      "name": "Burzin Patel",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
     },
     {
-      "name": "Perry Govier",
-      "profilePic": "https://avatars1.githubusercontent.com/u/571056?v=3",
-      "twitter": "perrygovier",
-      "about": "Be it code, places, gadgets, food, or conversation, Perry loves to explore. While AFK he's probably biking around Madison, spending time with his wife and son, \"refactoring\" his house, or avoiding his overweight cat to whom he is very allergic and wishes was a dog.",
-      "location": "Madison, WI"
+      "name": "David Justice",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
     },
     {
-      "name": "Mike Hartington",
-      "profilePic": "https://avatars0.githubusercontent.com/u/2835826?v=3",
-      "twitter": "mhartington",
-      "about": "Deep in the frozen North, just before the great wall, a man sits with a laptop, surrounded by serval cups of coffee and a glass of whiskey. Traveling across this great kingdom, he enlightens other devs and shares his knowledge through the written and spoken word. When the laptop is not near, he often finds solace in music with his guitar.",
-      "location": "Rhode Island"
+      "name": "Dan Driscoll",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
     },
     {
-      "name": "Dan Imhoff",
-      "profilePic": "https://pbs.twimg.com/profile_images/627907755743952896/TEEur1pK.jpg",
-      "twitter": "dwieeb",
-      "about": "Dan \"the Sunshine Man\" builds awesome stuff for the Ionic Platform. When not shredding it in Vim, he can be found tearing over snow in his fat bike, attending the Madison tech meetups, ignorantly rating restaurants, taking a bunch of photographs at random cities and National Parks, or, possibly, still playing LEGOs.",
-      "location": "Madison, WI"
+      "name": "Ryan Salva",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
     },
     {
-      "name": "Brody Kidd",
-      "profilePic": "https://avatars0.githubusercontent.com/u/5280265?v=3",
-      "twitter": "brodymkidd",
-      "about": "If you can’t find him on call, shuffling through email, poking around on a new CRM, in our live chat support, or white boarding new business development… Odds are he is surfing lake Michigan, fly fishing the gin clear streams of the driftless region, camping in the north woods, or milking his goats.",
-      "location": "Madison, WI"
+      "name": "Igor Sedukhin",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
     },
     {
-      "name": "Tim Lancina",
-      "profilePic": "https://avatars2.githubusercontent.com/u/804331?v=3",
-      "twitter": "timlancina",
-      "about": "A temporarily embarrassed pro soccer player, Tim is fond of traveling the world and trying to convince his coworkers to eat bugs.  When not doing either of those, he is usually breaking things related to Ionic tooling, the platform, or the framework.",
-      "location": "Madison, WI"
+      "name": "Donovan Brown",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
     },
     {
-      "name": "Max Lynch",
-      "profilePic": "https://avatars3.githubusercontent.com/u/11214?v=3",
-      "twitter": "maxlynch",
-      "about": "Max loves using the power of software to make technology more accessible to people around the world. When not writing code or obsessing over a crazy new idea, he can be found watching the Premier League, riding Snowmobiles in a very safe manner, and hanging out with his wife Melissa and two Cavalier King Charles Spaniels.",
-      "location": "Madison, WI"
+      "name": "Ankit Asthana",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
     },
     {
-      "name": "Rudy Pelrine",
-      "profilePic": "https://avatars0.githubusercontent.com/u/1584992?v=3",
-      "twitter": "Drawn_Closer",
-      "about": "A musician, DJ, sound engineer, photographer, and self proclaimed fashion nerd, Rudy seems to find a new obsession daily.  At Ionic, you'll find him working on the Platform services, making sure everyone's notifications arrive safe and sound.",
-      "location": "Madison, WI"
+      "name": "Andrew Clinick",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
     },
     {
-      "name": "Drew Rygh",
-      "profilePic": "https://avatars2.githubusercontent.com/u/2018508?v=3",
-      "twitter": "ionicframework",
-      "about": "On most days, you will find Drew devising dazzling demos, drafting documentation, and consuming copious quantities of caffeine. He is obsessed with clarity, and making Ionic easy and fun to use. When not working, you might find him walking around the UW-Madison campus, where he is studying philosophy and computer science.",
-      "location": "Madison, WI"
+      "name": "Instructor",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
     },
     {
-      "name": "Ben Sperry",
-      "profilePic": "https://avatars1.githubusercontent.com/u/519526?v=3",
-      "twitter": "benjsperry",
-      "about": "Ben is a user interface designer and front end tinkerer based in Madison, WI. He’s fascinated with making delightful human and machine interactions. He is also the co-founder of Ionic.",
-      "location": "Madison, WI"
+      "name": "Dan Kershaw",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Boaz Ashkenazy",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Khalid Mouss",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Ali Alvi",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Adrian Ferrier",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Kevin Zhang",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Michael Hilsdale",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Sonya Koptyev",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Laurent Bugnion",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Jonathan Carter",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Kiril Seksenov",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Richard Dormer",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Charles Morris",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Unni Ravindranathan",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Eugene Chigirinskiy",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Amanda Silver",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Kaycee Anderson",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Joe Stegman",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
+    },
+    {
+      "name": "Brad McCabe",
+      "profilePic": "img/profilepic2.png",
+      "twitter": "",
+      "about": "",
+      "location": ""
     }
   ],
 
-
   "map": [
     {
-      "name": "Monona Terrace Convention Center",
-      "lat": 43.071584,
-      "lng": -89.380120,
+      "name": "Moscone West",
+      "lat": 37.783870,
+      "lng": -122.401095,
       "center": true
-    },
-    {
-      "name": "Ionic HQ",
-      "lat": 43.074395,
-      "lng": -89.381056
-    },
-    {
-      "name": "Afterparty - Brocach Irish Pub",
-      "lat": 43.07336,
-      "lng": -89.38335
     }
   ]
 

@@ -1,10 +1,10 @@
-# Ionic 2 Conference Application
+# MS Build Conference Application
 
-This is purely a demo of Ionic v2.0 and is still in development.
+This is purely a demo application built with Ionic 2 and Azure App services for the 2016 Microsoft build conference.
 
 ## Important!
-**There is not an actual Ionic Conference at this time.** This project is just to show off Ionic v2.0 components in a real-world application.
-Please go through the steps in [CONTRIBUTING.md](https://github.com/driftyco/ionic-conference-app/blob/master/CONTRIBUTING.md) before submitting an issue.
+Here is the link to the [conference](https://build.microsoft.com/). This project is just to show off Ionic v2.0 components with Azure app service in a real-world application.
+To learn more about Tools for Apache Cordova, visit this [link](https://taco.visualstudio.com/).
 
 
 ## Table of Contents
@@ -12,18 +12,28 @@ Please go through the steps in [CONTRIBUTING.md](https://github.com/driftyco/ion
  - [Contributing](#contributing)
  - [App Preview](#app-preview)
   - [iPhone 6](#iphone-6)
-  - [Nexus 5](#nexus-5)
+  - [Samsung Galaxy S5](#samsung-galaxy-s5)
  - [Use Cases](#use-cases)
  - [File Structure of App](#file-structure-of-app)
 
 
 ## Getting Started
 
+With VS Code:
 * Clone this repository.
 * Run `npm install` from the project root.
-* Install the ionic CLI (`npm install -g ionic@beta`)
-* Run `ionic serve` in a terminal from the project root.
-* Profit
+* Install ionic-CLI and taco-CLI (`npm install -g cordova ionic@beta taco-cli`)
+* Add android / iOS / windows platform to your project by running `taco platform add <platform name>` in a terminal from your project root.
+* Build the project by running `taco build <platform name>`
+* Deploy to device or emulator by running `taco run <platform name>` or `taco emulate <platform name>`
+* Success
+
+With Visual Studio:
+* Clone this repository.
+* Open the ionic-conference-app.sln in Visual Studio.
+* Install npm packages by going to your Solution Explorer -> Dependencies -> npm and clicking on 'Restore Packages'. 
+* Once packages are restored, build the project and deploy it on an android emulator. 
+* Success
 
 
 ## Contributing
@@ -53,28 +63,25 @@ See [CONTRIBUTING.md](https://github.com/driftyco/ionic-conference-app/blob/mast
 
 ### iPhone 6
 
-<!-- GIF of iOS app -->
-<img src="resources/gifs/ios.gif" alt="iOS"><br>
+
 <!-- images of iOS app -->
-<img src="resources/screenshots/iphone/1.png" alt="Sessions" width="425">
-<img src="resources/screenshots/iphone/2.png" alt="Filter Sessions" width="425">
-<img src="resources/screenshots/iphone/3.png" alt="Speakers" width="425">
-<img src="resources/screenshots/iphone/4.png" alt="Speaker Detail" width="425">
-<img src="resources/screenshots/iphone/5.png" alt="Map" width="425">
-<img src="resources/screenshots/iphone/6.png" alt="About" width="425">
+<img src="resources/screenshots/iphone/1.png"  width="425">
+<img src="resources/screenshots/iphone/2.png"  width="425">
+<img src="resources/screenshots/iphone/3.png"  width="425">
+<img src="resources/screenshots/iphone/4.png"  width="425">
+<img src="resources/screenshots/iphone/5.png"  width="425">
+<img src="resources/screenshots/iphone/6.png"  width="425">
 
 
-### Nexus 5
+### Samsung Galaxy S5
 
 <!-- GIF of MD app -->
-<img src="resources/gifs/nexus.gif" alt="MD"><br>
-<!-- GIF of MD app -->
-<img src="resources/screenshots/nexus/1.png" alt="Sessions" width="425">
-<img src="resources/screenshots/nexus/2.png" alt="Filter Sessions" width="425">
-<img src="resources/screenshots/nexus/3.png" alt="Speakers" width="425">
-<img src="resources/screenshots/nexus/4.png" alt="Speaker Detail" width="425">
-<img src="resources/screenshots/nexus/5.png" alt="Map" width="425">
-<img src="resources/screenshots/nexus/6.png" alt="About" width="425">
+<img src="resources/screenshots/samsung/1.png"  width="425">
+<img src="resources/screenshots/samsung/2.png"  width="425">
+<img src="resources/screenshots/samsung/3.png"  width="425">
+<img src="resources/screenshots/samsung/4.png"  width="425">
+<img src="resources/screenshots/samsung/5.png"  width="425">
+<img src="resources/screenshots/samsung/6.png"  width="425">
 
 
 ## File Structure of App

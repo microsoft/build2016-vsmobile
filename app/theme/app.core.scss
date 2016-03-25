@@ -22,3 +22,8 @@
 @import "../pages/speaker-detail/speaker-detail";
 
 @import "../pages/speaker-list/speaker-list";
+
+.bar-button-menuToggle {
+  transform: translateZ(0px);
+  z-index: 99;
+}
