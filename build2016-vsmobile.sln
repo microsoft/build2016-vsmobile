@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "ionic-conference-app", "ionic-conference-app.jsproj", "{79035309-CB0B-4BE4-A6E6-E5CD52F7C8CA}"
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "build2016-vsmobile", "build2016-vsmobile.jsproj", "{79035309-CB0B-4BE4-A6E6-E5CD52F7C8CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
