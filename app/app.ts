@@ -41,7 +41,8 @@ class ConferenceApp {
     { title: 'Logout', component: LogOutPage, icon: 'log-out' }
   ];
   loggedOutPages: PageObj[] = [
-    { title: 'Login', component: LoginPage, icon: 'log-in' }
+    { title: 'Login', component: LoginPage, icon: 'log-in' },
+    { title: 'Signup', component: SignupPage, icon: 'person-add' }
   ];
   rootPage: any = TabsPage;
   loggedIn = false;

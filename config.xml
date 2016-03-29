@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget android-versionCode="12" id="ms.ionic.conference" version="0.2.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-versionCode="12" id="ms.ionic.conference" version="0.2.8 " xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Build2016-vsmobile</name>
   <description>
         A hybrid mobile app built with Ionic2 for the 2016 Microsoft Build conference
