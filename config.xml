@@ -4,7 +4,7 @@
   <description>
         A hybrid mobile app built with Ionic2 for the 2016 Microsoft Build conference
   </description>
-  <author email="neja@microsoft.com" href="http://taco.visualstudio.com/">
+  <author email="vscordovatools@microsoft.com" href="http://taco.visualstudio.com/">
       Ionic Framework Team and Tools for Apache Cordova Team
   </author>
   <content src="index.html" />
