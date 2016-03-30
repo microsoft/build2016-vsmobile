@@ -92,17 +92,14 @@ export class UserData {
                     }
                 });
             });
-          favs.forEach((localFav) => {
-              this.addToRemoteIfNotExist(localFav);
-              console.log(`adding ${localFav} to remote`);
-          });                
+          favs.forEach(localFav => this.addToRemoteIfNotExist(localFav));
     }
   }
   
  addToRemoteIfNotExist(sessionName: string){
     let favDto = {
             userid: this.userid,
-            sessionName: sessionName,
+            sessionName: sessionName, 
             loginProvider: "TBD"
         };
 
@@ -110,7 +107,8 @@ export class UserData {
         // if nothing found...
         if (d && d.length === 0) {
             // then insert 
-            this.remoteFavsTable.insert(favDto);                        
+            this.remoteFavsTable.insert(favDto); 
+            console.log(`adding ${sessionName} to remote`);                     
         }
     });  
   }
