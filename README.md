@@ -24,7 +24,7 @@ With VS Code:
 * Run `npm install` from the project root.
 * Install ionic-CLI and taco-CLI (`npm install -g cordova ionic@beta taco-cli`)
 * Add android / iOS / windows platform to your project by running `taco platform add <platform name>` in a terminal from your project root.
-* Build the project by running `taco build <platform name>`
+* Build the project by running gulp build and then `taco build <platform name>`
 * Deploy to device or emulator by running `taco run <platform name>` or `taco emulate <platform name>`
 * Success
 
