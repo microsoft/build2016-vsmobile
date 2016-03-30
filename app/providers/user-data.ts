@@ -75,54 +75,45 @@ export class UserData {
       });;
   }
 
-  syncFavorites() {
-      if (this.client && this.loggedIn) {
-          this.remoteFavsTable = this.client.getTable('favorites');
-          
-          // loop through local faves array
-          this._favorites.forEach((localFav) => {
-
-              // paranoia: make sure it's not undefined or null
-              if (localFav) {
-                console.log("adding loc fav to remote:" + localFav)
-                
-                // create a data transfer object for each fave
-                let favDto = {
-                    userid: this.userid,
-                    sessionName: localFav,
-                    loginProvider: "TBD"
-                };
-                                
-               // check if the local fave exists in our remote table
-                this.remoteFavsTable.where(favDto).read().then((d) => {
-
-                    // if nothing found...
-                    if (d && d.length === 0) {
-
-                        // then insert 
-                        this.remoteFavsTable.insert(favDto);                        
+  syncFavorites(){
+    if (this.client && this.loggedIn) {
+        let favs = this._favorites.slice(); //local copy
+        this.remoteFavsTable = this.client.getTable('favorites');
+        this.remoteFavsTable.where({ userId: this.userid }).read()
+            .then((data: [any]) => {
+                data.forEach(s=>{
+                    if (this.hasFavorite(s.sessionName)){
+                        console.log(`remote ${s.sessionName} exist in local`);
+                        let pos = favs.indexOf(s.sessionName);
+                        favs.splice(pos, 1);
+                    } else {
+                        this.addFavorite(s.sessionName);
+                        console.log(`adding ${s.sessionName} to local`);
                     }
-                });                
-              }
-          });
-
-          this.remoteFavsTable.where({ userId: this.userid }).read()
-            .then(
-                (data: [any]) => {
-                    console.log("read remote:" + data.length);
-                    data.forEach((s) => {
-                        if (s.sessionName && !this.hasFavorite(s.sessionName)) {
-                            console.log("adding remote to local:" + s.sessionName)
-                            this.addFavorite(s.sessionName);                            
-                        }                 
-                    });
-                    this.events.publish('favs:sync');
-                },
-                (err) => { console.log('ReadU KO ' + JSON.stringify(err)); }
-          );          
-      }      
+                });
+            });
+          favs.forEach((localFav) => {
+              this.addToRemoteIfNotExist(localFav);
+              console.log(`adding ${localFav} to remote`);
+          });                
+    }
   }
+  
+ addToRemoteIfNotExist(sessionName: string){
+    let favDto = {
+            userid: this.userid,
+            sessionName: sessionName,
+            loginProvider: "TBD"
+        };
 
+    this.remoteFavsTable.where(favDto).read().then((d) => {
+        // if nothing found...
+        if (d && d.length === 0) {
+            // then insert 
+            this.remoteFavsTable.insert(favDto);                        
+        }
+    });  
+  }
 
   deleteSessionFromRemote(sessionName) {
       this.remoteFavsTable = this.client.getTable('favorites');
