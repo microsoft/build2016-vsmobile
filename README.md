@@ -1,5 +1,7 @@
 # MS Build Conference Application
 
+![vsts build status](https://rido.visualstudio.com/DefaultCollection/_apis/public/build/definitions/41d7a42c-12ae-4d66-aa47-f7c63ea5ef34/14/badge)
+
 This is purely a demo application built with Ionic 2 and Azure App services for the 2016 Microsoft build conference.
 
 ## Important!
@@ -84,109 +86,4 @@ See [CONTRIBUTING.md](https://github.com/driftyco/ionic-conference-app/blob/mast
 <img src="resources/screenshots/samsung/6.png"  width="425">
 
 
-## File Structure of App
 
-```
-ionic-conference-app/
-├── app/                               * Working directory
-│   ├── pages/                         * Contains all of our pages
-│   │   ├── about/                     * About tab page
-│   │   │    ├── about.html            * AboutPage template
-│   │   │    └── about.js              * AboutPage code
-│   │   │    └── about.scss            * AboutPage stylesheet
-│   │   │
-│   │   │── login/                     * Login page
-│   │   │    ├── login.html            * LoginPage template
-│   │   │    └── login.js              * LoginPage code
-│   │   │    └── login.scss            * LoginPage stylesheet
-│   │   │
-│   │   │── map/                       * Map tab page
-│   │   │    ├── map.html              * MapPage template
-│   │   │    └── map.js                * MapPage code
-│   │   │    └── map.scss              * MapPage stylesheet
-│   │   │
-│   │   │── schedule/                  * Schedule tab page
-│   │   │    ├── schedule.html         * SchedulePage template
-│   │   │    └── schedule.js           * SchedulePage code
-│   │   │    └── schedule.scss         * SchedulePage stylesheet
-│   │   │
-│   │   │── schedule-filter/           * Schedule Filter page
-│   │   │    ├── schedule-filter.html  * ScheduleFilterPage template
-│   │   │    └── schedule-filter.js    * ScheduleFilterPage code
-│   │   │    └── schedule-filter.scss  * ScheduleFilterPage stylesheet
-│   │   │
-│   │   │── session-detail/            * Session Detail page
-│   │   │    ├── session-detail.html   * SessionDetailPage template
-│   │   │    └── session-detail.js     * SessionDetailPage code
-│   │   │
-│   │   │── signup/                    * Signup page
-│   │   │    ├── signup.html           * SignupPage template
-│   │   │    └── signup.js             * SignupPage code
-│   │   │
-│   │   │── speaker-detail/            * Speaker Detail page
-│   │   │    ├── speaker-detail.html   * SpeakerDetailPage template
-│   │   │    └── speaker-detail.js     * SpeakerDetailPage code
-│   │   │    └── speaker-detail.scss   * SpeakerDetailPage stylesheet
-│   │   │
-│   │   │── speaker-list/              * Speakers tab page
-│   │   │    ├── speaker-list.html     * SpeakerListPage template
-│   │   │    └── speaker-list.js       * SpeakerListPage code
-│   │   │    └── speaker-list.scss     * SpeakerListPage stylesheet
-│   │   │
-│   │   │── tabs/                      * Tabs page
-│   │   │    ├── tabs.html             * TabsPage template
-│   │   │    └── tabs.js               * TabsPage code
-│   │   │
-│   │   └── tutorial/                  * Tutorial Intro page
-│   │        ├── tutorial.html         * TutorialPage template
-│   │        └── tutorial.js           * TutorialPage code
-│   │        └── tutorial.scss         * TutorialPage stylesheet
-│   │
-│   ├── providers/                     * Contains all Injectables
-│   │   ├── conference-data.js         * ConferenceData code
-│   │   └── user-data.js               * UserData code
-│   │
-│   ├── theme/                         * App theme files
-│   │   ├── app.core.scss              * App Shared Sass Imports
-│   │   ├── app.ios.scss               * iOS Sass Imports & iOS Variables
-│   │   ├── app.md.scss                * MD Sass Imports & MD Variables
-│   │   └── app.variables.scss         * App Shared Sass Variables
-│   │
-│   ├── app.html                       * Application template
-│   └── app.js                         * Main Application configuration
-│
-|
-├── node_modules/                      * Node dependencies
-|
-├── platforms/                         * Cordova generated native platform code
-|
-├── plugins/                           * Cordova native plugins go
-|
-├── resources/                         * Images for splash screens and icons
-|
-├── www/                               * Folder that is copied over to platforms www directory
-│   │   
-│   ├── build/                         * Contains auto-generated compiled content
-│   │     ├── css/                     * Compiled CSS
-│   │     ├── fonts/                   * Copied Fonts
-│   │     ├── js/                      * ES5 compiled JavaScript
-│   │     ├── pages/                   * Copied html pages
-│   │     └── app.html                 * Copied app entry point
-│   │
-│   ├── data/                          * Contains data used for the app
-│   │     └── data.json                * App data
-│   │
-│   ├── img/                           * App images
-│   │
-│   └── index.html                     * Main entry point
-|
-├── .editorconfig                      * Defines coding styles between editors
-├── .gitignore                         * Example git ignore file
-├── config.xml                         * Cordova configuration file
-├── CONTRIBUTING.md                    * Information about contributing to this project
-├── ionic.config.js                    * Ionic configuration file
-├── LICENSE                            * Apache License
-├── package.json                       * Our javascript dependencies
-├── README.md                          * This file
-└── webpack.config.js                  * Webpack configuration file
-```
