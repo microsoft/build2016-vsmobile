@@ -91,8 +91,8 @@ export class UserData {
                         console.log(`adding ${s.sessionName} to local`);
                     }
                 });
+                favs.forEach(localFav => this.addToRemoteIfNotExist(localFav));
             });
-          favs.forEach(localFav => this.addToRemoteIfNotExist(localFav));
     }
   }
   
