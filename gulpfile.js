@@ -1,179 +1,63 @@
-/// <binding BeforeBuild='build' />
-/******************************************************************************
- * Gulpfile
- * Be sure to run `npm install` for `gulp` and the following tasks to be
- * available from the command line. All tasks are run using `gulp taskName`.
- ******************************************************************************/
-var Promise = require('es6-promise').Promise
-var fs = require('fs'),
-    browserify = require('browserify'),
-    watchify = require('watchify'),
-    tsify = require('tsify'),
-    source = require('vinyl-source-stream'),
-    rename = require('gulp-rename'),
-    pretty = require('prettysize');
-    gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    watch = require('gulp-watch'),
-    gutil = require('gulp-util'),
-    buffer = require('vinyl-buffer'),
-    sourcemaps = require('gulp-sourcemaps');
+var Promise = require("es6-promise").Promise;
+
+var gulp = require('gulp'),
+    gulpWatch = require('gulp-watch'),
+    del = require('del'),
+    runSequence = require('run-sequence'),
+    argv = process.argv;
 
 
-var IONIC_DIR = "node_modules/ionic-angular/"
+/**
+ * Ionic hooks
+ * Add ':before' or ':after' to any Ionic project command name to run the specified
+ * tasks before or after the command.
+ */
+gulp.task('serve:before', ['watch']);
+gulp.task('emulate:before', ['build']);
+gulp.task('deploy:before', ['build']);
+gulp.task('build:before', ['build']);
 
+// we want to 'watch' when livereloading
+var shouldWatch = argv.indexOf('-l') > -1 || argv.indexOf('--livereload') > -1;
+gulp.task('run:before', [shouldWatch ? 'watch' : 'build']);
 
-/******************************************************************************
- * watch
- * Build the app and watch for source file changes.
- ******************************************************************************/
-gulp.task('watch', ['sass', 'copy.fonts', 'copy.html', 'copy.scripts'], function(done) {
-  watch('www/app/**/*.scss', function(){
-    gulp.start('sass');
-  });
-  watch('www/app/**/*.html', function(){
-    gulp.start('copy.html');
-  });
-  return bundleTask(true);
+/**
+ * Ionic Gulp tasks, for more information on each see
+ * https://github.com/driftyco/ionic-gulp-tasks
+ *
+ * Using these will allow you to stay up to date if the default Ionic 2 build
+ * changes, but you are of course welcome (and encouraged) to customize your
+ * build however you see fit.
+ */
+var buildBrowserify = require('ionic-gulp-browserify-typescript');
+var buildSass = require('ionic-gulp-sass-build');
+var copyHTML = require('ionic-gulp-html-copy');
+var copyFonts = require('ionic-gulp-fonts-copy');
+var copyScripts = require('ionic-gulp-scripts-copy');
+
+gulp.task('watch', ['clean'], function (done) {
+    runSequence(
+      ['sass', 'html', 'fonts', 'scripts'],
+      function () {
+          gulpWatch('app/**/*.scss', function () { gulp.start('sass'); });
+          gulpWatch('app/**/*.html', function () { gulp.start('html'); });
+          buildBrowserify({ watch: true }).on('end', done);
+      }
+    );
 });
 
-/******************************************************************************
- * patch io2
- * patch typings
- ******************************************************************************/
-gulp.task('patch-io', function (done) {
-    return gulp.src('_fixes/content.js')
-        .pipe(gulp.dest('node_modules/ionic-angular/components/content'));
+gulp.task('build', ['clean'], function (done) {
+    runSequence(
+      ['sass', 'html', 'fonts', 'scripts'],
+      function () {
+          buildBrowserify().on('end', done);
+      }
+    );
 });
-
-/******************************************************************************
- * patch ng
- * patch typings
- ******************************************************************************/
-gulp.task('patch-ng', function (done) {
-    return gulp.src('_fixes/promise.d.ts')
-        .pipe(gulp.dest('node_modules/angular2/src/facade'));
+gulp.task('sass', buildSass);
+gulp.task('html', copyHTML);
+gulp.task('fonts', copyFonts);
+gulp.task('scripts', copyScripts);
+gulp.task('clean', function () {
+    return del('www/build');
 });
-
-/******************************************************************************
- * build
- * Build the app once, without watching for source file changes.
- ******************************************************************************/
-gulp.task('build', ['patch-io','patch-ng','sass', 'copy.fonts', 'copy.html', 'copy.scripts'], function(done) {
-  return bundleTask(false, done);
-});
-
-
-/******************************************************************************
- * sass
- * Convert Sass files to a single bundled CSS file. Uses auto-prefixer
- * to automatically add required vendor prefixes when needed.
- ******************************************************************************/
-gulp.task('sass', function(){
-  var autoprefixerOpts = {
-    browsers: [
-      'last 2 versions',
-      'iOS >= 7',
-      'Android >= 4',
-      'Explorer >= 10',
-      'ExplorerMobile >= 11'
-    ],
-    cascade: false
-  };
-
-  return gulp.src('app/theme/app.+(ios|md|wp).scss')
-    .pipe(sass({
-      includePaths: [
-        IONIC_DIR,
-        'node_modules/ionicons/dist/scss'
-      ]
-    }))
-    .on('error', function(err){
-      console.error(err.message);
-      this.emit('end');
-    })
-    .pipe(autoprefixer(autoprefixerOpts))
-    .pipe(gulp.dest('www/build/css'))
-});
-
-
-/******************************************************************************
- * copy.fonts
- * Copy Ionic font files to build directory.
- ******************************************************************************/
-gulp.task('copy.fonts', function() {
-  return gulp.src(IONIC_DIR + 'fonts/**/*.+(ttf|woff|woff2)')
-    .pipe(gulp.dest('www/build/fonts'));
-});
-
-
-/******************************************************************************
- * copy.html
- * Copy html files to build directory.
- ******************************************************************************/
-gulp.task('copy.html', function(){
-  return gulp.src('app/**/*.html')
-    .pipe(gulp.dest('www/build'));
-});
-
-/******************************************************************************
- * copy.scripts
- * Copy scripts to build directory
- ******************************************************************************/
-gulp.task('copy.scripts', function(){
-  return gulp.src('node_modules/angular2/bundles/angular2-polyfills.min.js')
-    .pipe(gulp.dest('www/build/js'));
-});
-
-
-/******************************************************************************
- * clean
- * Delete previous build files.
- ******************************************************************************/
-gulp.task('clean', function(done) {
-  var del = require('del');
-  del(['www/build'], done);
-});
-
-
-/******************************************************************************
- * Bundle
- * Transpile source files and bundle them into build directory using browserify
- * and tsify.
- ******************************************************************************/
- function bundleTask(watch) {
-     var b = browserify(
-       ['./app/app.ts', './typings/main.d.ts'],
-       {
-           cache: {},
-           packageCache: {},
-           debug: true //set to false to disable sourcemaps
-       }
-     )
-     .plugin(tsify, { noImplicitAny: false });
-     
-
-   if (watch) {
-     b = watchify(b);
-     b.on('update', bundle);
-     b.on('log', function(log){
-       console.log((log = log.split(' '), log[0] = pretty(log[0]), log.join(' ')));
-     });
-   }
-
-   return bundle();
-
-   function bundle() {
-     return b.bundle()
-       .on('error', function(err){ console.error(err.toString()); })       
-      .pipe(source('app.js'))
-      .pipe(buffer())
-      .pipe(sourcemaps.init({ loadMaps: true }))
-      .pipe(sourcemaps.write('./',{
-          includeContent: true,
-          sourceRoot: '../../../'}))
-      .pipe(gulp.dest('./www/build/js'));
-    }
- }
-

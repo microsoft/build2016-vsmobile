@@ -1,4 +1,4 @@
-import 'es6-shim/es6-shim.min';
+
 
 import {App, IonicApp, Events, Platform} from 'ionic-angular';
 import {ConferenceData} from './providers/conference-data';
