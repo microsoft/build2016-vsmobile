@@ -1,5 +1,5 @@
 $categories: (
- ionic: map-get($colors, primary),
+ ionic: color($colors, primary),
  breakout: #AC282B,
  codelab: #FED035,
  minitheater: #69BB7B,
