@@ -1,24 +1,23 @@
-
-<ion-navbar *navbar>
-  <button menuToggle>
-    <ion-icon name="menu"></ion-icon>
-  </button>
-  <ion-title>Login</ion-title>
-</ion-navbar>
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
 
 <ion-content>
 
   <ion-list>
     <div class="logo">
-      <img src="img/logo.png">
+      <img src="img/appicon.svg">
     </div>
-
-    <div class="imageStyling">
-        <img src="img/facebook.png" (click)="doLogin('facebook')" />
-        <img src="img/twitter.png"  (click)="doLogin('twitter')" />
-        <img src="img/googleplus.png" (click)="doLogin('google')" />
-    </div>
-
+      <div class="imageStyling">
+          <img src="img/facebook.png" (click)="doLogin('facebook')" />
+          <img src="img/twitter.png" (click)="doLogin('twitter')" />
+          <img src="img/googleplus.png" (click)="doLogin('google')" />
+      </div>
   </ion-list>
 
 </ion-content>

@@ -1,18 +1,21 @@
 $categories: (
  ionic: color($colors, primary),
- breakout: #AC282B,
- codelab: #FED035,
- minitheater: #69BB7B,
- maintheater: #6600CC,
+ angular: #AC282B,
+ communication: #8E8D93,
+ tooling: #FE4C52,
+ services: #FD8B2D,
+ design: #FED035,
+ workshop: #69BB7B,
  food: #3BC7C4,
  documentation: #B16BE3,
+ navigation: #6600CC,
 );
 
 @function auxiliary-categories() {
   @return map-remove($categories);
 }
 
-.schedule {
+.schedule-page {
   @each $track, $value in auxiliary-categories() {
    ion-item-sliding[track=#{$track}] ion-label {
      border-left: 2px solid $value;
@@ -20,11 +23,3 @@ $categories: (
    }
   }
 }
-
-// Related to https://github.com/driftyco/ionic/issues/5055
-.ios .hide-border .toolbar-background {
-  border-bottom-color: transparent;
-}
-
-
-

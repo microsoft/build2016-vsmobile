@@ -10,6 +10,7 @@ log.txt
 *.sublime-project
 *.sublime-workspace
 
+.vscode/
 .idea/
 .sass-cache/
 .versions/
@@ -29,14 +30,9 @@ $RECYCLE.BIN/
 Thumbs.db
 UserInterfaceState.xcuserstate
 
-#VS
+.vs/
 bin/
 bld/
-.vs/
-.vscode/
 *.user
 *.suo
-
-app/**/*.js
-app/**/*.js.map
-
+*.sln

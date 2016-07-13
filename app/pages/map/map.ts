@@ -1,13 +1,17 @@
-import {Page} from 'ionic-angular';
-import {ConferenceData} from '../../providers/conference-data';
+import { Component } from '@angular/core';
 
-@Page({
+import { Page } from 'ionic-angular';
+
+import { ConferenceData } from '../../providers/conference-data';
+
+
+@Component({
   templateUrl: 'build/pages/map/map.html'
 })
 export class MapPage {
   constructor(private confData: ConferenceData) {}
 
-  onPageLoaded() {
+  ionViewLoaded() {
     this.confData.getMap().then(mapData => {
       let mapEle = document.getElementById('map');
 

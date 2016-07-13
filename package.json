@@ -1,43 +1,53 @@
 {
-  "name": "build2016-vsmobile",
-  "description": "Microsoft Build Conference App",
+  "name": "ionic-conference-app",
+  "description": "Ionic Conference App",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Microsoft/build2016-vsmobile.git"
+    "url": "https://github.com/driftyco/ionic-conference-app.git"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.15",
-    "es6-promise": "3.0.2",
-    "es6-shim": "^0.35.0",
-    "ionic-angular": "2.0.0-beta.6",
+    "@angular/common": "^2.0.0-rc.3",
+    "@angular/compiler": "^2.0.0-rc.3",
+    "@angular/core": "^2.0.0-rc.3",
+    "@angular/http": "^2.0.0-rc.3",
+    "@angular/platform-browser": "^2.0.0-rc.3",
+    "@angular/platform-browser-dynamic": "^2.0.0-rc.3",
+    "@angular/router": "^2.0.0-rc.2",
+    "es6-shim": "0.35.0",
+    "ionic-angular": "^2.0.0-beta.10",
     "ionic-native": "^1.1.0",
-    "ionicons": "3.0.0-alpha.3",
-    "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.2"    
+    "ionicons": "3.0.0",
+    "reflect-metadata": "0.1.3",
+    "rxjs": "5.0.0-beta.6",
+    "zone.js": "0.6.12"
   },
   "devDependencies": {
     "del": "2.2.0",
     "gulp": "3.9.1",
+    "gulp-tslint": "^5.0.0",
     "gulp-watch": "4.3.5",
-    "ionic-gulp-browserify-typescript": "^1.0.0",
+    "ionic-gulp-browserify-typescript": "^2.0.0",
     "ionic-gulp-fonts-copy": "^1.0.0",
     "ionic-gulp-html-copy": "^1.0.0",
     "ionic-gulp-sass-build": "^1.0.0",
-    "ionic-gulp-scripts-copy": "^1.0.1",
-    "run-sequence": "1.1.5"
+    "ionic-gulp-scripts-copy": "^2.0.0",
+    "ionic-gulp-tslint": "^1.0.0",
+    "run-sequence": "1.1.5",
+    "tslint": "^3.10.1",
+    "tslint-ionic-rules": "^0.0.3"
   },
   "cordovaPlugins": [
-    "cordova-plugin-device",
-    "cordova-plugin-console",    
-    "cordova-plugin-splashscreen",
-    "cordova-plugin-statusbar",
-    "ionic-plugin-keyboard",
     "cordova-plugin-whitelist",
     {
       "locator": "https://github.com/VersoSolutions/CordovaClipboard",
       "id": "com.verso.cordova.clipboard"
-    }
+    },
+    {
+      "locator": "https://github.com/apache/cordova-plugin-splashscreen.git",
+      "id": "cordova-plugin-splashscreen"
+    },
+    "cordova-plugin-crosswalk-webview"
   ],
   "cordovaPlatforms": [
     "ios",

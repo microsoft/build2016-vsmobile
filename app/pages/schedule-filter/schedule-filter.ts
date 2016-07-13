@@ -1,8 +1,11 @@
-import {Page, NavParams, ViewController} from 'ionic-angular';
-import {ConferenceData} from '../../providers/conference-data';
+import { Component } from '@angular/core';
+
+import { NavParams, ViewController } from 'ionic-angular';
+
+import { ConferenceData } from '../../providers/conference-data';
 
 
-@Page({
+@Component({
   templateUrl: 'build/pages/schedule-filter/schedule-filter.html'
 })
 export class ScheduleFilterPage {

@@ -1,14 +1,23 @@
-import {IonicApp, Page, Modal, Alert, NavController, ItemSliding, Events} from 'ionic-angular';
-import {ConferenceData} from '../../providers/conference-data';
-import {UserData} from '../../providers/user-data';
-import {ScheduleFilterPage} from '../schedule-filter/schedule-filter';
-import {SessionDetailPage} from '../session-detail/session-detail';
+import { Component, ViewChild } from '@angular/core';
+
+import { Alert, App, ItemSliding, List, Modal, NavController, Page } from 'ionic-angular';
+
+import { ConferenceData } from '../../providers/conference-data';
+import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
+import { SessionDetailPage } from '../session-detail/session-detail';
+import { UserData } from '../../providers/user-data';
 
 
-@Page({
+@Component({
   templateUrl: 'build/pages/schedule/schedule.html'
 })
 export class SchedulePage {
+  // the list is a child of the schedule page
+  // @ViewChild('scheduleList') gets a reference to the list
+  // with the variable #scheduleList, `read: List` tells it to return
+  // the List and not a reference to the element
+  @ViewChild('scheduleList', {read: List}) scheduleList: List;
+
   dayIndex = 0;
   queryText = '';
   segment = 'all';
@@ -17,23 +26,25 @@ export class SchedulePage {
   groups = [];
 
   constructor(
-    private app: IonicApp,
+    private app: App,
     private nav: NavController,
     private confData: ConferenceData,
-    private user: UserData,
-    private events: Events
-  ) {      
-      this.listenToFavsEvents();
-      this.updateSchedule();
+    private user: UserData
+  ) {
+
   }
 
-  onPageDidEnter() {
+  ionViewDidEnter() {
     this.app.setTitle('Schedule');
+  }
+
+  ngAfterViewInit() {
+    this.updateSchedule();
   }
 
   doRefresh(refresher) {
       console.log('Begin async operation', refresher);
-      
+
       this.user.syncFavorites();
 
       setTimeout(() => {
@@ -42,9 +53,10 @@ export class SchedulePage {
       }, 2000);
   }
 
-
-
   updateSchedule() {
+    // Close any open sliding items when the schedule updates
+    this.scheduleList && this.scheduleList.closeSlidingItems();
+
     this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).then(data => {
       this.shownSessions = data.shownSessions;
       this.groups = data.groups;
@@ -72,48 +84,59 @@ export class SchedulePage {
 
   addFavorite(slidingItem: ItemSliding, sessionData) {
       sessionData.favorite = true;
-      this.user.addFavorite(sessionData.name);      
+    if (this.user.hasFavorite(sessionData.name)) {
+      // woops, they already favorited it! What shall we do!?
+      // prompt them to remove it
+      this.removeFavorite(slidingItem, sessionData, 'Favorite already added');
+    } else {
+      // remember this session as a user favorite
+      this.user.addFavorite(sessionData.name);
+
+      // create an alert instance
       let alert = Alert.create({
         title: 'Favorite Added',
         buttons: [{
           text: 'OK',
-          handler: () => {      
+          handler: () => {
+            // close the sliding item
             slidingItem.close();
           }
         }]
       });
-      
-      this.nav.present(alert);   
-  }
-  
-  removeFavorite(slidingItem: ItemSliding, sessionData) {
-        let alert = Alert.create({
-            title: 'Remove Favorite',
-            message: 'Would you like to remove this session from your favorites?',
-            buttons: [
-            {
-                text: 'Cancel',
-                handler: () => {                
-                    slidingItem.close();
-                }
-            },
-            {
-                text: 'Remove',
-                handler: () => {      
-                    this.user.removeFavorite(sessionData.name);
-                    sessionData.favorite = false;      
-                    slidingItem.close();
-                    this.updateSchedule();
-                }
-            }
-            ]
-      });      
+      // now present the alert on top of all other content
       this.nav.present(alert);
+    }
+
   }
-  listenToFavsEvents() {
-      this.events.subscribe("favs:sync", () => {
-          console.log("updating favs");
-          this.updateSchedule(); 
-      });
+
+  removeFavorite(slidingItem: ItemSliding, sessionData, title) {
+      sessionData.favorite = false;
+    let alert = Alert.create({
+      title: title,
+      message: 'Would you like to remove this session from your favorites?',
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: () => {
+            // they clicked the cancel button, do not remove the session
+            // close the sliding item and hide the option buttons
+            slidingItem.close();
+          }
+        },
+        {
+          text: 'Remove',
+          handler: () => {
+            // they want to remove this session from their favorites
+            this.user.removeFavorite(sessionData.name);
+            this.updateSchedule();
+
+            // close the sliding item and hide the option buttons
+            slidingItem.close();
+          }
+        }
+      ]
+    });
+    // now present the alert on top of all other content
+    this.nav.present(alert);
   }
 }

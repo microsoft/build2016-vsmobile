@@ -1,11 +1,9 @@
-var Promise = require("es6-promise").Promise;
-
+/// <binding BeforeBuild='build' />
 var gulp = require('gulp'),
     gulpWatch = require('gulp-watch'),
     del = require('del'),
     runSequence = require('run-sequence'),
     argv = process.argv;
-
 
 /**
  * Ionic hooks
@@ -34,30 +32,42 @@ var buildSass = require('ionic-gulp-sass-build');
 var copyHTML = require('ionic-gulp-html-copy');
 var copyFonts = require('ionic-gulp-fonts-copy');
 var copyScripts = require('ionic-gulp-scripts-copy');
+var tslint = require('ionic-gulp-tslint');
 
-gulp.task('watch', ['clean'], function (done) {
-    runSequence(
-      ['sass', 'html', 'fonts', 'scripts'],
-      function () {
-          gulpWatch('app/**/*.scss', function () { gulp.start('sass'); });
-          gulpWatch('app/**/*.html', function () { gulp.start('html'); });
-          buildBrowserify({ watch: true }).on('end', done);
-      }
-    );
+var isRelease = argv.indexOf('--release') > -1;
+
+gulp.task('watch', ['clean'], function(done){
+  runSequence(
+    ['sass', 'html', 'fonts', 'scripts'],
+    function(){
+      gulpWatch('app/**/*.scss', function(){ gulp.start('sass'); });
+      gulpWatch('app/**/*.html', function(){ gulp.start('html'); });
+      buildBrowserify({ watch: true }).on('end', done);
+    }
+  );
+});
+gulp.task('build', ['clean'], function(done){
+  runSequence(
+    ['sass', 'html', 'fonts', 'scripts'],
+    function(){
+      buildBrowserify({
+        minify: isRelease,
+        browserifyOptions: {
+          debug: !isRelease
+        },
+        uglifyOptions: {
+          mangle: false
+        }
+      }).on('end', done);
+    }
+  );
 });
 
-gulp.task('build', ['clean'], function (done) {
-    runSequence(
-      ['sass', 'html', 'fonts', 'scripts'],
-      function () {
-          buildBrowserify().on('end', done);
-      }
-    );
-});
 gulp.task('sass', buildSass);
 gulp.task('html', copyHTML);
 gulp.task('fonts', copyFonts);
 gulp.task('scripts', copyScripts);
-gulp.task('clean', function () {
-    return del('www/build');
+gulp.task('clean', function(){
+  return del('www/build');
 });
+gulp.task('lint', tslint);
